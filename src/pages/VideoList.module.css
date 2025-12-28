@@ -1,0 +1,91 @@
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.processing {
+    background: #fde68a;
+}
+
+.safe {
+    background: #86efac;
+}
+
+.flagged {
+    background: #fca5a5;
+}
+
+.progressWrapper {
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 18px;
+    background: #2563eb;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.actions {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.playBtn {
+    padding: 6px 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.playBtn:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.playBtn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.note {
+    font-size: 12px;
+    color: #92400e;
+}
+
+.flagNote {
+    font-size: 12px;
+    color: #b91c1c;
+}

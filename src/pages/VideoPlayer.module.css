@@ -1,0 +1,35 @@
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.heading {
+    margin-bottom: 16px;
+}
+
+.playerWrapper {
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6b7280;
+}
