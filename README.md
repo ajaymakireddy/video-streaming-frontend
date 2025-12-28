@@ -1,20 +1,80 @@
-<<<<<<< HEAD
-# React + Vite
+🎥 Video Upload, Sensitivity Processing & Streaming Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application that allows users to upload videos, process them for content sensitivity, track real-time progress, and stream videos efficiently with proper authentication, role-based access control, and multi-tenant isolation.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Secure authentication using JWT
 
-## React Compiler
+Role-based access control (Viewer, Editor, Admin)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Multi-tenant architecture (user data isolation)
 
-## Expanding the ESLint configuration
+Video upload with progress tracking
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# video-streaming-frontend
->>>>>>> 78175081e6cf3dcbcecaccd8865444dfd89e468c
+Real-time processing updates using Socket.io
+
+Sensitivity classification (Safe / Flagged)
+
+Efficient video streaming using HTTP Range Requests
+
+Clean and modular frontend using React + CSS Modules
+
+
+🏗️ Architecture Overview
+🔹 Frontend
+
+React (Vite)
+
+CSS Modules for scoped styling
+
+React Router for navigation
+
+Socket.io Client for real-time updates
+
+🔹 Backend
+
+Node.js + Express
+
+PostgreSQL database
+
+Sequelize ORM
+
+JWT Authentication
+
+Socket.io for real-time communication
+
+Multer for file uploads
+
+Native Node.js streaming APIs
+
+
+🔹 High-Level Flow
+User
+ ↓
+React Frontend
+ ↓
+Express REST APIs
+ ↓
+PostgreSQL (via Sequelize)
+ ↓
+Socket.io (real-time updates)
+ ↓
+Video Streaming API (HTTP Range)
+
+
+🧠 Why Sensitivity Analysis Is Simulated
+
+The assignment requires video sensitivity detection, but implementing real AI/ML-based content analysis is beyond the scope of a coding assignment.
+
+What is implemented:
+
+Background processing simulation
+
+Incremental progress updates (0% → 100%)
+
+Final classification:
+
+safe
+
+flagged

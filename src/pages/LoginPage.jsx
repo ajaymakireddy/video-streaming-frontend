@@ -19,6 +19,8 @@ export default function LoginPage() {
     });
 
     const data = await res.json();
+    console.log(data);
+    
 
     if (!res.ok) {
       alert(data.message || "Login failed");
@@ -26,6 +28,10 @@ export default function LoginPage() {
     }
 
     localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    localStorage.setItem("isAuthenticated", "true");
+    // localStorage.setItem("user", data.user.name);
+    // localStorage.setItem("email", data.user.email);
     navigate("/dashboard"); // ✅ proper redirect
   };
 
@@ -51,7 +57,7 @@ export default function LoginPage() {
           required
         />
 
-        <button className={styles.button} onChange={handleSubmit}>Login</button>
+        <button className={styles.button} type="submit" >Login</button>
 
         {/* ✅ Register option */}
         <p className={styles.link}>
