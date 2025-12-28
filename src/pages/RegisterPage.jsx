@@ -22,9 +22,9 @@ export default function RegisterPage() {
         <div className={styles.container}>
             <form className={styles.card} onSubmit={handleSubmit}>
                 <h2 className={styles.title}>Register</h2>
-                <input className={styles.input} name="name" placeholder="Name" onChange={handleChange} />
-                <input className={styles.input} name="email" placeholder="Email" onChange={handleChange} />
-                <input className={styles.input} name="password" type="password" placeholder="Password" onChange={handleChange} />
+                <input className={styles.input} name="name" placeholder="Enter your Name" onChange={handleChange} />
+                <input className={styles.input} name="email" placeholder="Enter your Email" onChange={handleChange} />
+                <input className={styles.input} name="password" type="Enter your password" placeholder="Password" onChange={handleChange} />
                 <button className={styles.button}>Register</button>
 
                 <p className={styles.link}>

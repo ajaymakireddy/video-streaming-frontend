@@ -37,7 +37,7 @@ export default function LoginPage() {
         <input
           className={styles.input}
           name="email"
-          placeholder="Email"
+          placeholder="Enter you Email"
           onChange={handleChange}
           required
         />
@@ -46,7 +46,7 @@ export default function LoginPage() {
           className={styles.input}
           name="password"
           type="password"
-          placeholder="Password"
+          placeholder="Enter your Password"
           onChange={handleChange}
           required
         />

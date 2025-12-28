@@ -1,65 +1,77 @@
+/* Reset */
+
+
+/* Center container */
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f6f8;
+    background-color: #f2f4f8;
 }
 
+/* Card (form box) */
 .card {
-    width: 360px;
-    background: white;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
 }
 
+/* Header */
 .title {
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.button {
-    width: 100%;
-    padding: 10px;
-    background: #F96E5B;
+    background-color: #1c4d8d;
     color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+}
+
+/* Inputs */
+.input {
+    width: 90%;
+    padding: 10px 20px;
+    /* margin-bottom: 12px; */
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid gray;
+    font-size: 15px;
+    font-weight: 500;
+    /* margin-top: 15px; */
+    margin: 15px 20px; ;
+}
+
+/* Button */
+.button {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #cc561e;
+    color: black;
     border: none;
-    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
-    font-weight: 600;
 }
 
 .button:hover {
-    background: #eb331a;
+    background-color: #e76b3b;
+    color: white;
+    transition: 0.3s;
 }
 
+/* Bottom link text */
 .link {
     text-align: center;
-    margin-top: 12px;
     font-size: 14px;
-}
-
-.link {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .link a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.link a:hover {
-  text-decoration: underline;
+    text-decoration: none;
+    color: rgb(6, 45, 88);
+    font-weight: 500;
 }
