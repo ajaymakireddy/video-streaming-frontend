@@ -78,3 +78,146 @@ Final classification:
 safe
 
 flagged
+
+Why this is acceptable:
+
+Demonstrates backend processing pipelines
+
+Enables real-time UI updates
+
+Shows system design and state management
+
+Easily replaceable with real AI services (AWS Rekognition, Azure Video Indexer, etc.)
+
+The system is designed so real AI services can be integrated later without changing the core architecture.
+
+
+Why this is acceptable:
+
+Demonstrates backend processing pipelines
+
+Enables real-time UI updates
+
+Shows system design and state management
+
+Easily replaceable with real AI services (AWS Rekognition, Azure Video Indexer, etc.)
+
+The system is designed so real AI services can be integrated later without changing the core architecture.
+
+
+
+🔐 Role-Based Access Control (RBAC)
+
+The application supports three user roles:
+
+| Role   | Permissions            |
+| ------ | ---------------------- |
+| Viewer | View and play videos   |
+| Editor | Upload and view videos |
+| Admin  | Full access            |
+
+
+Backend Enforcement
+
+User role is embedded inside JWT
+
+Middleware checks role before allowing API access
+
+role(["editor", "admin"])
+role(["editor", "admin"])
+
+
+Frontend Enforcement
+
+UI elements rendered conditionally based on role
+
+Upload button hidden for viewers
+
+🎬 Video Streaming Implementation
+
+The platform uses HTTP Range Requests for efficient video streaming.
+
+Why Range Requests?
+
+Streams video in chunks
+
+Supports seek, pause, resume
+
+Avoids loading entire video into memory
+
+Backend
+
+Uses fs.createReadStream
+
+Responds with 206 Partial Content
+
+Sends Content-Range headers
+
+Frontend
+
+Uses native HTML <video> element
+
+Browser automatically sends Range headers
+
+This mirrors how real video streaming platforms operate.
+
+
+🛠️ Tech Stack
+Frontend
+
+React (Vite)
+
+CSS Modules
+
+React Router
+
+Socket.io Client
+
+Backend
+
+Node.js
+
+Express
+
+PostgreSQL
+
+Sequelize ORM
+
+JWT Authentication
+
+Socket.io
+
+Multer
+
+
+How to Run Locally
+Backend
+
+cd backend
+npm install
+npm run dev
+
+Frontend
+
+cd frontend
+npm install
+npm run dev
+
+🧪 Testing Roles
+
+You can manually update roles in PostgreSQL:
+
+UPDATE "Users" SET role='editor' WHERE email='editor@test.com';
+UPDATE "Users" SET role='admin' WHERE email='admin@test.com';
+
+Log out and log in again to refresh JWT.
+
+📌 Assumptions & Design Decisions
+
+Sensitivity analysis is simulated
+
+Streaming endpoint is public for demo simplicity
+
+PostgreSQL chosen over MongoDB for relational data integrity
+
+Sequelize used for maintainable SQL abstraction
